@@ -14,7 +14,7 @@
 
 ```docker run -u $(id -u):$(id -g) –w <working-directory> -v <directory-you-want-to-mount>:<how-you-want-to-mount-it-within-the-docker> --rm <docker-image-name> <command-to-the-docker-with-all-parameters>```
 
-#### My command: 
+#### My command:
 
 ```Provide the command you ran here```
 
@@ -56,6 +56,6 @@
 
 ### GitHub Packages Auto Build Rules
 
-- [ ] I have not manually pushed this Docker image to the uclahs-cds container registry (`ghcr.io/theboutroslab`) on [GitHub](https://github.com/orgs/theboutroslab/packages).
+- [ ] I have not manually pushed this Docker image to the theboutroslab container registry (`ghcr.io/theboutroslab`) on [GitHub](https://github.com/orgs/theboutroslab/packages).
 
 - [ ] **I have updated the `image_name`** in the `metadata.yaml` which is required by GitHub action to automatically build and push the image.

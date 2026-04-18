@@ -1,51 +1,43 @@
-# docker-tool_name
-Template Repository for the Boutros Lab Dockerfiles based on mambaforge base image.
-
-The base image is pulled from https://hub.docker.com/r/condaforge/mambaforge
-
-# Documentation
-Docker introduction [here](https://uclahs-cds.atlassian.net/wiki/spaces/BOUTROSLAB/pages/3190419/Docker+Introduction)
-
-Dockerfile Best Practices [here](https://uclahs-cds.atlassian.net/wiki/spaces/BOUTROSLAB/pages/3189770/Dockerfile+Best+Practices)
-
-Docker image versioning standard [here](https://uclahs-cds.atlassian.net/wiki/spaces/BOUTROSLAB/pages/3188472/Docker+image+versioning+standardization)
-
+# docker-mosdepth
+Boutros Lab Docker image for mosdepth.
 
 # Version
 | Tool | Version |
 |------|---------|
-|tool_name| X.X.X|
-|tool_name_2|X.X.X|
+| mosdepth | 0.3.13 |
 
 ---
 
 ## Discussions
 
-- [Issue tracker](<link-to-issues-page>) to report errors and enhancement ideas.
-- Discussions can take place in [docker-<tool> Discussions](<link-to-discussions>)
-- [docker-<tool> pull requests](<link-to-pull-requests>) are also open for discussion
+- [Issue tracker](https://github.com/TheBoutrosLab/docker-mosdepth/issues) to report errors and enhancement ideas.
+- Discussions can take place in [docker-mosdepth Discussions](https://github.com/TheBoutrosLab/docker-mosdepth/discussions).
+- [docker-mosdepth pull requests](https://github.com/TheBoutrosLab/docker-mosdepth/pulls) are also open for discussion.
 
 ---
 
 ## Contributors
 
-Please see list of [Contributors](<link-to-contributors-insights>) at GitHub.
+Please see the list of [Contributors](https://github.com/TheBoutrosLab/docker-mosdepth/graphs/contributors) at GitHub.
 
 ---
 
 ## References
 
-1. Tool specific references can be listed here
+1. [mosdepth GitHub repository](https://github.com/brentp/mosdepth)
+2. [mosdepth documentation](https://github.com/brentp/mosdepth/blob/v0.3.13/README.md)
+3. [Bioconda package recipe for mosdepth](https://bioconda.github.io/recipes/mosdepth/README.html)
+4. Brent S. Pedersen, Aaron R. Quinlan. Mosdepth: quick coverage calculation for genomes and exomes. Bioinformatics. 2018 Mar 1;34(5):867-868. https://doi.org/10.1093/bioinformatics/btx699
 
 ---
 
 ## License
 
-Author: Name1, Name2
+Author: Yash Patel
 
-[docker repo name] is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
+`docker-mosdepth` is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
 
-<one line to give the program's name and a brief idea of what it does.>
+`docker-mosdepth` provides a Docker image for mosdepth.
 
 Copyright (C) 2026 Sanford Burnham Prebys Medical Discovery Institute ("Boutros Lab") All rights reserved.
 
