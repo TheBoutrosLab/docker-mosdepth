@@ -1,25 +1,35 @@
-ARG MINIFORGE_VERSION=24.9.2-0
+ARG MINIFORGE_VERSION=26.1.1-2
 ARG UBUNTU_VERSION=24.04
+ARG CONDA_ENV_PATH=/opt/conda/envs/mosdepth
 
-FROM condaforge/mambaforge:${MINIFORGE_VERSION} AS builder
+FROM condaforge/miniforge3:${MINIFORGE_VERSION} AS builder
 
-# Use mamba to install tools and dependencies into /usr/local
-ARG TOOL_VERSION=X.X.X
-RUN mamba create -qy -p /usr/local \
+ARG CONDA_ENV_PATH
+ARG MOSDEPTH_VERSION=0.3.13
+
+# Use mamba to install tools and dependencies into the configured environment path
+RUN mamba create -qy -p ${CONDA_ENV_PATH} \
     -c bioconda \
     -c conda-forge \
-    tool_name==${TOOL_VERSION}
+    mosdepth==${MOSDEPTH_VERSION} && \
+    mamba clean -afy
 
-# Deploy the target tools into a base image
 FROM ubuntu:${UBUNTU_VERSION} AS final
-COPY --from=builder /usr/local /usr/local
+
+ARG CONDA_ENV_PATH
+
+COPY --from=builder ${CONDA_ENV_PATH} ${CONDA_ENV_PATH}
+
+ENV CONDA_ENV_PATH="${CONDA_ENV_PATH}" \
+    PATH="${CONDA_ENV_PATH}/bin:${PATH}"
 
 # Add a new user/group called bldocker
 RUN groupadd -g 500001 bldocker && \
-    useradd -r -u 500001 -g bldocker bldocker
+    useradd -m -r -u 500001 -g bldocker bldocker
 
 # Change the default user to bldocker from root
 USER bldocker
 
-LABEL   maintainer="Your Name <YourName@sbpdiscovery.org>" \
-        org.opencontainers.image.source=https://github.com/TheBoutrosLab/<REPO>
+LABEL maintainer="Yash Patel <ypatel@sbpdiscovery.org>" \
+      org.opencontainers.image.source=https://github.com/TheBoutrosLab/docker-mosdepth \
+      org.opencontainers.image.description="Dockerfile for mosdepth"
