@@ -25,7 +25,7 @@ Please see the list of [Contributors](https://github.com/TheBoutrosLab/docker-mo
 ## References
 
 1. [mosdepth GitHub repository](https://github.com/brentp/mosdepth)
-2. [mosdepth documentation](https://github.com/brentp/mosdepth/blob/v0.3.13/README.md)
+2. [mosdepth documentation](https://github.com/brentp/mosdepth/blob/master/README.md)
 3. [Bioconda package recipe for mosdepth](https://bioconda.github.io/recipes/mosdepth/README.html)
 4. Brent S. Pedersen, Aaron R. Quinlan. Mosdepth: quick coverage calculation for genomes and exomes. Bioinformatics. 2018 Mar 1;34(5):867-868. https://doi.org/10.1093/bioinformatics/btx699
 
