@@ -5,7 +5,7 @@ ARG CONDA_ENV_PATH=/opt/conda/envs/mosdepth
 FROM condaforge/miniforge3:${MINIFORGE_VERSION} AS builder
 
 ARG CONDA_ENV_PATH
-ARG MOSDEPTH_VERSION=0.3.13
+ARG MOSDEPTH_VERSION=0.3.14
 
 # Use mamba to install tools and dependencies into the configured environment path
 RUN mamba create -qy -p ${CONDA_ENV_PATH} \
