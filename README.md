@@ -4,7 +4,7 @@ Boutros Lab Docker image for mosdepth.
 # Version
 | Tool | Version |
 |------|---------|
-| mosdepth | 0.3.13 |
+| mosdepth | 0.3.14 |
 
 ---
 
