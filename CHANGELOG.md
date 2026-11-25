@@ -10,6 +10,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [Unreleased]
 
 ---
+## [0.3.15] - 2026-10-30
+### Changed
+- Update mosdepth to `v0.3.15`
+
+---
 ## [0.3.14] - 2026-09-03
 ### Changed
 - Update mosdepth to `v0.3.14`
