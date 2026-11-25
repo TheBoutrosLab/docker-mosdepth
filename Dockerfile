@@ -21,7 +21,9 @@ FROM ubuntu:${UBUNTU_VERSION} AS final
 # mosdepth dlopens the unversioned libhts.so at runtime, which only
 # libhts-dev provides; link it to the runtime library instead
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libhts3t64 && \
+    apt-get install -y --no-install-recommends \
+        ca-certificates \
+        libhts3t64 && \
     rm -rf /var/lib/apt/lists/* && \
     ln -s libhts.so.3 /usr/lib/$(uname -m)-linux-gnu/libhts.so
 
